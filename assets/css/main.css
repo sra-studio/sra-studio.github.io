@@ -2141,6 +2141,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
+
 /* List */
 
 	ol {
@@ -2198,6 +2199,14 @@ input, select, textarea {
 		ul.actions li {
 			padding: 0 0 0 1em;
 			vertical-align: middle;
+		}
+
+		ul.actions .icon {
+			vertical-align: middle; /* 讓 icon 與文字基線對齊 */
+			margin-right: 0.5em;     /* icon 與文字之間留點距離 */
+			display: inline-flex;       /* 用 flex 讓內容垂直置中 */
+			align-items: center;        /* 垂直置中 */
+			gap: 0.5em;  
 		}
 
 		ul.actions.special {
@@ -3172,6 +3181,19 @@ input, select, textarea {
 			color: #4E4852;
 		}
 
+			.wrapper.style5 .icon {
+				vertical-align: middle; /* 讓 icon 與文字基線對齊 */
+				display: inline-flex;       /* 用 flex 讓內容垂直置中 */
+				align-items: center;        /* 垂直置中 */
+				gap: 0.5em;
+				width: auto !important;
+			}
+
+			.wrapper.style5 .icons :hover {
+				cursor: pointer;
+				color: #9a9a9a !important;
+			}
+
 			.wrapper.style5 strong, .wrapper.style5 b {
 				color: #2E3842;
 			}
@@ -4023,24 +4045,117 @@ input, select, textarea {
 		background-color: #1d242a;
 	}
 
-
+/*  */
 .copyText {
-  cursor: pointer;
+	cursor: pointer;
 }
+
+.copyCode {
+	background: #f4f4f4;
+	color: #c7254e;
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 90%;
+	cursor: pointer; /* 提示可點擊 */
+}
+
 .popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* 往回移動一半，達到置中 */
-  background: #ffffff;
-  color: #3b3b3b;
-  padding: 15px 20px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* 往回移動一半，達到置中 */
+	background: #e6e5e5;
+	color: #3b3b3b;
+	padding: 15px 20px;
+	border-radius: 8px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
 }
 .popup.show {
-  opacity: 1;
+	opacity: 1;
+}
+
+.highlight-red {
+	color: #eb341c !important;
+}
+
+.inline-code {
+	background: #f4f4f4;
+	color: #c7254e;
+	padding: 2px 4px;
+	border-radius: 4px;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 90%;
+}
+
+.spoiler-block,
+.spoiler-content {
+	display: inline-block;   /* 改成 inline-block */
+	padding: 6px 10px;
+	border-radius: 5px;
+	background: #ccc;
+}
+
+.spoiler-content {
+	display: none;              /* 預設隱藏 */
+	background: #f4f4f4;
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+.spoiler-block {
+	background: #ccc;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+	transition: opacity 0.5s ease;
+}
+
+.spoiler-block.fadeout {
+	opacity: 0;
+}
+
+.spoiler-toggle {
+	cursor: pointer; /* 提示可點擊 */
+}
+
+.spoiler-toggle:hover {
+	color:#696969 !important;
+}
+
+.text-with-leftimage {
+	display: flex;
+	align-items: flex-start; /* 與文字頂端對齊 */
+}
+
+.text-with-leftimage img {
+	width: 200px;   /* 自訂大小 */
+	height: auto;
+	margin-right: 1em;
+}
+
+/* 當視窗寬度小於 600px 時，改成上下排列 */
+@media (max-width: 600px) {
+	.text-with-leftimage {
+		flex-direction: column;   /* 改成上下排列 */
+		align-items: center;      /* 讓圖片和文字置中，可改成 flex-start 靠左 */
+	}
+
+	.text-with-leftimage img {
+		margin-right: 0;          /* 移除右邊間距 */
+		margin-bottom: 1em;       /* 改成下方留空間 */
+	}
+}
+
+#scrollBtn {
+	cursor: pointer;
+	border-bottom: none;
+}
+
+#scrollBtn:hover {
+	color:#929292 !important;
 }
 
