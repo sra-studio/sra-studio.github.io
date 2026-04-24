@@ -1,1 +1,1 @@
-website
+© SRA Studio. All rights reserved.
