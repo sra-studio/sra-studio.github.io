@@ -3013,10 +3013,6 @@ input, select, textarea {
 				color: #ffffff;
 				font-family: "Font Awesome 7 Free";
 			}
-
-			.wrapper.style3 p:hover {
-				color: #fff;
-			}
 			
 			.wrapper.style3 a {
 				text-decoration: none;
@@ -4104,6 +4100,7 @@ input, select, textarea {
 	padding: 10px;
 	border-radius: 5px;
 	margin-top: 5px;
+	
 }
 
 .spoiler-block {
@@ -4124,6 +4121,11 @@ input, select, textarea {
 
 .spoiler-toggle:hover {
 	color:#696969 !important;
+}
+
+.spoiler-color-black {
+	color:#000000;
+	background-color: #000000;
 }
 
 .text-with-leftimage {
@@ -4159,3 +4161,6 @@ input, select, textarea {
 	color:#929292 !important;
 }
 
+.hover-white:hover {
+	color: #ffffff !important;
+}
