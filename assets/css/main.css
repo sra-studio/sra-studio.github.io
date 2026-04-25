@@ -4182,3 +4182,13 @@ input, select, textarea {
 .content-link:hover {
 	color:#8b8b8b !important;
 }
+
+.text-block {
+	display: block;
+}
+
+.img-crop {
+	aspect-ratio: 748 / 529; /* 維持比例 */
+	object-fit: cover;    /* 填滿並裁切 */
+	object-position: center;
+}
