@@ -15,6 +15,7 @@ fetch('/assets/data/search.json')
         'title',
         'description',
         'category',
+        'hashtag',
         'tag'
       ],
       threshold: 0.3
@@ -40,7 +41,8 @@ fetch('/assets/data/search.json')
             <header class="major">
                 <h3>${result.item.title}</h3>
                 <p>${result.item.description}</p>
-                <a class="icon fa-solid fa-hashtag"></a><a>${result.item.tag}</a>
+                <a class="icon fa-solid fa-hashtag"></a>${result.item.hashtag}<br />
+                <a class="icon fa-solid fa-tag"></a>${result.item.tag}
             </header>
         </a></article>
 
