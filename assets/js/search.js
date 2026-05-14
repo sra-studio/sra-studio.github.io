@@ -1,18 +1,23 @@
-const searchBox =
-  document.getElementById('searchBox');
+const searchBoxes =
+  document.querySelectorAll('.searchBox');
 
-searchBox.addEventListener('keydown', (e) => {
+searchBoxes.forEach(searchBox => {
 
-  if(e.key === 'Enter') {
+  searchBox.addEventListener('keydown', (e) => {
 
-    e.preventDefault();
+    if(e.key === 'Enter') {
 
-    const query = searchBox.value.trim();
+      e.preventDefault();
 
-    if(query.length > 0){
+      const query =
+        searchBox.value.trim();
 
-      window.location.href =
-        `/search/?q=${encodeURIComponent(query)}#searchForm`;
+      if(query.length > 0){
+
+        window.location.href =
+          `/search/?q=${encodeURIComponent(query)}#searchForm`;
+      }
     }
-  }
+  });
+
 });

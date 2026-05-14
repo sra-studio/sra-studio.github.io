@@ -1,17 +1,51 @@
 [
   {
     "title": "69 Land",
-    "title_p": "69遊樂園",
     "category": "Project",
     "url": "/Projects/202510_69Land/",
-    "description": "客製化遊樂園地圖"
+    "description": "69遊樂園 | 客製化遊樂園地圖",
+    "img": "/images/projects/202510_69Land/69land.png",
+    "tag": "建築"
+  },
+  {
+    "title": "Haunted House",
+    "category": "Project",
+    "url": "/Projects/202510_HauntedHouse/",
+    "description": "陸玖大宅 | 萬聖節鬼屋",
+    "img": "/images/projects/202510_HauntedHouse/haunted.png",
+    "tag": "建築、指令方塊"
+  },
+  {
+    "title": "Easter Egg Hunt",
+    "category": "Project",
+    "url": "/Projects/202604_EasterEggHunt/",
+    "description": "修蛋幾勒 | 復活節找蛋活動",
+    "img": "/images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png",
+    "tag": "資料包"
+  },
+  {
+    "title": "Maze",
+    "category": "Project",
+    "url": "/Projects/202604_Maze/",
+    "description": "咪宮 | 遊樂園迷宮",
+    "img": "/images/projects/202604_Maze/2026-04-25_18.47.58.png",
+    "tag": "建築、指令方塊"
   },
 
   {
+    "title": "Lost Dreamland Paradise",
+    "category": "Project",
+    "url": "/Maps/202608_LostDreamlandParadise/",
+    "description": "失落的夢境樂園",
+    "img": "/images/pic01.jpg",
+    "tag": "地圖、指令方塊、資料包、材質包"
+  },
+  {
     "title": "Haunted House",
-    "title_p": "陸玖大宅",
-    "category": "Map",
+    "category": "Project",
     "url": "/Maps/202510_HauntedHouse/",
-    "description": "萬聖節鬼屋"
+    "description": "鬼屋",
+    "img": "/images/pic02.jpg",
+    "tag": "地圖、資料包"
   }
 ]

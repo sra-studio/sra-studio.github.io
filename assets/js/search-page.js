@@ -13,36 +13,36 @@ fetch('/assets/data/search.json')
     const fuse = new Fuse(data, {
       keys: [
         'title',
-        'title_p',
         'description',
-        'category'
+        'category',
+        'tag'
       ],
       threshold: 0.3
     });
 
     const results = fuse.search(query);
 
-    const container =
-      document.getElementById('results');
+    const container = document.getElementById('results');
+    const none = document.getElementById('none');
 
     if(results.length === 0){
-      container.innerHTML =
-        '<p>No results found.</p>';
+      none.innerHTML =`
+        <h5>No results found.</h5>`;
       return;
     }
 
     container.innerHTML =
       results.map(result => `
-        <hr />
-
-        <header>
-            <a href="${result.item.url}"><h5>${result.item.title}</h5></a>
-            <p>${result.item.title_p}</p>
-        </header>
-
-        <p>
-            ${result.item.description}
-        </p>
+        <article><a href="${result.item.url}" class="link">
+            <span class="image">
+                <img src="${result.item.img}" alt="" />
+            </span>
+            <header class="major">
+                <h3>${result.item.title}</h3>
+                <p>${result.item.description}</p>
+                <a class="icon fa-solid fa-hashtag"></a><a>${result.item.tag}</a>
+            </header>
+        </a></article>
 
       `).join('');
   });
