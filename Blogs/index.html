@@ -7,7 +7,7 @@
 <html lang="zh-Hant">
 	<head>
 		<meta charset="utf-8" />
-		<title>SRA Studio | Search</title>
+		<title>SRA Studio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
@@ -20,12 +20,12 @@
 		<link href="/assets/fontawesome/css/sharp-duotone-thin.css" rel="stylesheet" />
 		
 		<!-- Web Icon -->
-		<link rel="icon" type="/image/png" sizes="32x32" href="/images/icon_64x64.png">
-		<link rel="icon" type="/image/png" sizes="16x16" href="/images/icon_64x64.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/icon_64x64.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/icon_64x64.png">
 
 
 		<!-- IOS/Android Icon -->
-		<link rel="icon" type="/image/png" sizes="180x180" href="/images/icon_sra.png">
+		<link rel="icon" type="image/png" sizes="180x180" href="/images/icon_sra.png">
 
 		<base href="/">
 
@@ -54,7 +54,7 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-                                            <li><input type="text" class="searchBox" placeholder="Search..." /></li>
+											<li><input type="text" class="searchBox" placeholder="Search..." /></li>
 
 											<li><a href="/">Home</a></li>
 											<li><a href="/Projects/">Projects</a></li>
@@ -69,33 +69,32 @@
 				<!-- Main -->
 					<article id="main">
 						<header class="default">
-							<h2>Search Results</h2>
-							<p>搜尋結果</p>
+							<h2>Blogs</h2>
+							<p>部落格</p>
 						</header>
-                        <section class="wrapper style3">
-                            <div class="inner">
-                                <form id="searchForm">
-                                    <input type="text" class="searchBox" placeholder="Search..." />
-                                </form>
-                                <header>
-                                    <p>
-                                        常用搜尋類別：
-                                        <a class="icon fa-solid fa-hashtag"></a><a href="/search/?q=map#searchForm">地圖</a>
-                                        <a class="icon fa-solid fa-hashtag"></a><a href="/search/?q=project#searchForm">專案</a>
-                                        <a class="icon fa-solid fa-tag"></a><a href="/search/?q=解謎#searchForm">解謎</a>
-                                        <a class="icon fa-solid fa-tag"></a><a href="/search/?q=多人#searchForm">多人</a>
-                                    </p>
-                                </header>
-                                
-                                <h3></h3>
-                                <hr />
-                                <p id="none"></p>
-                            </div>
-                        </section>
-                        
-						<section class="tiles" id="results">
-                            
-                        </section>
+						<section class="wrapper style3 special">
+							<div class="inner">
+								<h3>Haunted House</h3>
+								<a class="image fit hover-white" href="/Maps/202510_HauntedHouse/"><p><img class="img-crop" src="/images/pic01.jpg" alt="" /><br />鬼屋</p></a>
+								<a class="icon fa-solid fa-calendar" title="發布日期"></a><a>Comming Soon</a><br />
+								<p><a class="icon fa-solid fa-link"></a><a class="hover-white" href="/Maps/202510_HauntedHouse/">下載頁面</a></p>
+								<a class="icon fa-solid fa-hashtag"></a><a>地圖、資料包</a>
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-4"><span class="image fit"><img src="/images/pic01.jpg" alt="" /></span></div>
+										<div class="col-3"><span class="image fit"><img src="/images/pic02.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="/images/pic03.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="/images/pic03.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="/images/pic02.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="/images/pic01.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="/images/pic02.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="/images/pic01.jpg" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="/images/pic03.jpg" alt="" /></span></div>
+									</div>
+								</div>
+							</div>
+							
+						</section>
 					</article>
 
 				<!-- Footer -->
@@ -122,10 +121,9 @@
 
 			<!-- Google AdSense -->
 			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2260487722232602"crossorigin="anonymous"></script>
-            
-            <!-- Add on -->
-            <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
-            <script src="/assets/js/search.js"></script>
-            <script src="/assets/js/search-page.js"></script>
-    </body>
+			
+			<!-- Add on -->
+			<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+			<script src="/assets/js/search.js"></script>
+	</body>
 </html>
