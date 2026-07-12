@@ -1,0 +1,74 @@
+---
+const {
+  	title = 'SRA Studio',
+  	bodyClass = 'is-preload',
+  	includeCopyText = false,
+  	includeBackground = false,
+	BlockRightClick = false,
+  	includeSearchPage = false,
+  	includeCopyCode = false,
+  	includeSpoilerToggle = false
+} = Astro.props;
+---
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="zh-Hant">
+	<head>
+		<meta charset="utf-8" />
+		<title>{title}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../types/css/main.css" />
+		<noscript><link rel="stylesheet" href="../types/css/noscript.css" /></noscript>
+
+		<!-- Font Awesome icons -->
+		<link href="../types/fontawesome/css/fontawesome.css" rel="stylesheet" />
+		<link href="../types/fontawesome/css/brands.css" rel="stylesheet" />
+		<link href="../types/fontawesome/css/solid.css" rel="stylesheet" />
+
+		<!-- Web Icon -->
+		<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icon_64x64.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icon_64x64.png" />
+		
+		<!-- IOS/Android Icon -->
+		<link rel="icon" type="image/png" sizes="180x180" href="../assets/images/icon_sra.png" />
+
+		<base href="/" />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7PQGZVBBD"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-F7PQGZVBBD');
+		</script>
+	</head>
+	<body class={bodyClass}>
+		<slot />
+
+		<!-- Scripts -->
+		<script is:inline src="../types/js/jquery.min.js"></script>
+		<script is:inline src="../types/js/jquery.scrollex.min.js"></script>
+		<script is:inline src="../types/js/jquery.scrolly.min.js"></script>
+		<script is:inline src="../types/js/browser.min.js"></script>
+		<script is:inline src="../types/js/breakpoints.min.js"></script>
+		<script is:inline src="../types/js/util.js"></script>
+		<script is:inline src="../types/js/main.js"></script>
+
+		<!-- Google AdSense -->
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2260487722232602" crossorigin="anonymous"></script>
+
+		<!-- Add on -->
+		{includeCopyText && <script is:inline src="../types/js/copyText.js"></script>}
+		{includeCopyCode && <script is:inline src="../types/js/copyCode.js"></script>}
+		{includeSpoilerToggle && <script is:inline src="../types/js/spoiler-toggle.js"></script>}
+		{includeBackground && <script is:inline src="../types/js/background.js"></script>}
+		{BlockRightClick && <script is:inline src="../types/js/block-rightclick.js"></script>}
+		<script is:inline src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+		{includeSearchPage ? <script is:inline src="../types/js/search-page.js"></script> : <script is:inline src="/src/types/js/search.js"></script>}
+	</body>
+</html>
