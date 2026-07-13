@@ -2,7 +2,7 @@ const params =  new URLSearchParams(window.location.search);
 
 const query = params.get('q');
 
-fetch('/src/types/data/search.json')
+fetch('./src/types/data/search.json')
     .then(res => res.json())
     .then(data => {
 
