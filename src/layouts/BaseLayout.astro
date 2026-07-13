@@ -21,20 +21,20 @@ const {
 		<meta charset="utf-8" />
 		<title>{title}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../types/css/main.css" />
-		<noscript><link rel="stylesheet" href="../types/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="/src/types/css/main.css" />
+		<noscript><link rel="stylesheet" href="/src/types/css/noscript.css" /></noscript>
 
 		<!-- Font Awesome icons -->
-		<link href="../types/fontawesome/css/fontawesome.css" rel="stylesheet" />
-		<link href="../types/fontawesome/css/brands.css" rel="stylesheet" />
-		<link href="../types/fontawesome/css/solid.css" rel="stylesheet" />
+		<link href="/src/types/fontawesome/css/fontawesome.css" rel="stylesheet" />
+		<link href="/src/types/fontawesome/css/brands.css" rel="stylesheet" />
+		<link href="/src/types/fontawesome/css/solid.css" rel="stylesheet" />
 
 		<!-- Web Icon -->
-		<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icon_64x64.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icon_64x64.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/src/assets/images/icon_64x64.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/src/assets/images/icon_64x64.png" />
 		
 		<!-- IOS/Android Icon -->
-		<link rel="icon" type="image/png" sizes="180x180" href="../assets/images/icon_sra.png" />
+		<link rel="icon" type="image/png" sizes="180x180" href="/src/assets/images/icon_sra.png" />
 
 		<base href="/" />
 
@@ -51,24 +51,24 @@ const {
 		<slot />
 
 		<!-- Scripts -->
-		<script is:inline src="../types/js/jquery.min.js"></script>
-		<script is:inline src="../types/js/jquery.scrollex.min.js"></script>
-		<script is:inline src="../types/js/jquery.scrolly.min.js"></script>
-		<script is:inline src="../types/js/browser.min.js"></script>
-		<script is:inline src="../types/js/breakpoints.min.js"></script>
-		<script is:inline src="../types/js/util.js"></script>
-		<script is:inline src="../types/js/main.js"></script>
+		<script is:inline src="/src/types/js/jquery.min.js"></script>
+		<script is:inline src="/src/types/js/jquery.scrollex.min.js"></script>
+		<script is:inline src="/src/types/js/jquery.scrolly.min.js"></script>
+		<script is:inline src="/src/types/js/browser.min.js"></script>
+		<script is:inline src="/src/types/js/breakpoints.min.js"></script>
+		<script is:inline src="/src/types/js/util.js"></script>
+		<script is:inline src="/src/types/js/main.js"></script>
 
 		<!-- Google AdSense -->
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2260487722232602" crossorigin="anonymous"></script>
 
 		<!-- Add on -->
-		{includeCopyText && <script is:inline src="../types/js/copyText.js"></script>}
-		{includeCopyCode && <script is:inline src="../types/js/copyCode.js"></script>}
-		{includeSpoilerToggle && <script is:inline src="../types/js/spoiler-toggle.js"></script>}
-		{includeBackground && <script is:inline src="../types/js/background.js"></script>}
-		{BlockRightClick && <script is:inline src="../types/js/block-rightclick.js"></script>}
+		{includeCopyText && <script is:inline src="/src/types/js/copyText.js"></script>}
+		{includeCopyCode && <script is:inline src="/src/types/js/copyCode.js"></script>}
+		{includeSpoilerToggle && <script is:inline src="/src/types/js/spoiler-toggle.js"></script>}
+		{includeBackground && <script is:inline src="/src/types/js/background.js"></script>}
+		{BlockRightClick && <script is:inline src="/src/types/js/block-rightclick.js"></script>}
 		<script is:inline src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
-		{includeSearchPage ? <script is:inline src="../types/js/search-page.js"></script> : <script is:inline src="/src/types/js/search.js"></script>}
+		{includeSearchPage ? <script is:inline src="/src/types/js/search-page.js"></script> : <script is:inline src="/src/types/js/search.js"></script>}
 	</body>
 </html>
