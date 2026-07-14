@@ -1,83 +1,37 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import GenericLayout from '../layouts/GenericLayout.astro';
 
-const bodyHtml = `<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="/">SRA Studio</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-                                            <li><input type="text" class="searchBox" placeholder="Search..." /></li>
-
-											<li><a href="/">Home</a></li>
-											<li><a href="/projects">Projects</a></li>
-											<li><a href="/maps">Maps</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<article id="main">
-						<header class="default">
-							<h2>Search Results</h2>
-							<p>搜尋結果</p>
-						</header>
-                        <section class="wrapper style3">
-                            <div class="inner">
-                                <form id="searchForm">
-                                    <input type="text" class="searchBox" placeholder="Search..." />
-                                </form>
-                                <header>
-                                    <p>
-                                        常用搜尋類別：
-                                        <a class="icon fa-solid fa-hashtag"></a><a href="/search/?q=map#searchForm">地圖</a>
-                                        <a class="icon fa-solid fa-hashtag"></a><a href="/search/?q=project#searchForm">專案</a>
-                                        <a class="icon fa-solid fa-tag"></a><a href="/search/?q=解謎#searchForm">解謎</a>
-                                        <a class="icon fa-solid fa-tag"></a><a href="/search/?q=多人#searchForm">多人</a>
-                                    </p>
-                                </header>
-                                
-                                <h3></h3>
-                                <hr />
-                                <p id="none"></p>
-                            </div>
-                        </section>
-                        
-						<section class="tiles" id="results">
-                            
-                        </section>
-					</article>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://github.com/sra-studio" class="icon fa-brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
-							<li><a href="https://forms.gle/6JYrZwiZPHqsZ7ZB6" class="icon fa-solid fa-paper-plane" target="_blank" rel="noopener noreferrer"><span class="label">Contact</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; 2026 SRA Studio. All rights reserved.</li><li>Page Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-
-			</div>`;
+const pageTitle = "SRA Studio";
+const mainTitle = "Search Results";
+const subTitle = "搜尋結果";
 ---
-<BaseLayout
-  title="SRA Studio | Search"
-  bodyClass="is-preload"
-  includeCopyText={false}
-  includeBackground={false}
-  includeSearchPage={true}
-  includeCopyCode={false}
-  includeSpoilerToggle={false}
->
-  <Fragment set:html={bodyHtml} />
-</BaseLayout>
+<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle}>
+    <section class="wrapper style3">
+        <div class="inner">
+            <form id="searchForm">
+                <input type="text" class="searchBox" placeholder="Search..." />
+            </form>
+            <header>
+                <p>
+                    常用搜尋類別：
+                    <a class="icon fa-solid fa-hashtag"></a><a href="/search/?q=map#searchForm">地圖</a>
+                    <a class="icon fa-solid fa-hashtag"></a><a href="/search/?q=project#searchForm">專案</a>
+                    <a class="icon fa-solid fa-tag"></a><a href="/search/?q=解謎#searchForm">解謎</a>
+                    <a class="icon fa-solid fa-tag"></a><a href="/search/?q=多人#searchForm">多人</a>
+                </p>
+            </header>
+            
+            <h3></h3>
+            <hr />
+            <p id="none"></p>
+        </div>
+    </section>
+    
+    <section class="tiles" id="results">
+        
+    </section>
+
+    <script>
+        import '../styles/js/search-page'
+    </script>
+</GenericLayout>

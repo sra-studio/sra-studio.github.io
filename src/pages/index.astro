@@ -1,232 +1,189 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import HomePageLayout from '../layouts/HomePageLayout.astro';
+const pageTitle = "SRA Studio";
 
-const bodyHtml = `<!-- Page Wrapper -->
-			<div id="page-wrapper">
+import Joy from '../images/joy1.png';
+import Annie from '../images/annie1.png';
+import Lups from '../images/lups1.png';
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="/">SRA Studio</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><input type="text" class="searchBox" placeholder="Search..." /></li>
+import Img_202510_69Land from '../images/projects/202510_69Land/69land.png';
+import Img_202510_HauntedHouse from '../images/projects/202510_HauntedHouse/haunted.png';
+import Img_202604_EasterEggHunt from '../images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png';
+import Img_202604_Mase from '../images/projects/202604_Maze/2026-04-25_18.47.58.png';
+import Pic01 from '../images/pic01.jpg';
 
-											<li><a href="/">Home</a></li>
-											<li><a href="/projects">Projects</a></li>
-											<li><a href="/maps">Maps</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>SRA Studio</h2>
-							<p class="text-block">
-								Minecraft maps, resourcepacks, datapacks, plugins<br/>
-								since 2026
-							</p>
-							
-							<ul class="actions special">
-								<li><a href="https://forms.gle/6JYrZwiZPHqsZ7ZB6" target="_blank" rel="noopener noreferrer" class="button primary">Contact Us</a></li>
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>About Us<br /></h2>
-								<p class="text-block">
-									來自臺灣的小團隊，由一群對Minecraft有熱情的朋友組成。<br />
-									希望能做出一些高品質的地圖。偶爾也會自製材質包、資料包和插件。
-								</p>
-
-								<p class="text-block">
-									We are a team from Taiwan, composed of a group of friends who are passionate about Minecraft.<br />
-									Our goal is to create high-quality maps. We also accasionally create resourcepacks, datapacks and plugins.
-								</p>
-							</header>
-							<ul class="icons">
-								<li><span class="icon fa-solid fa-users major style1"><span class="label">Users</span></span></li>
-								<li></li>
-								<li><span class="icon fa-solid fa-cubes major style2"><span class="label">Cubes</span></span></li>
-								<li></li>
-								<li><span class="icon fa-solid fa-terminal major style3"><span class="label">Terminal</span></span></li>
-								<li></li>
-								<li><span class="icon fa-solid fa-file-zipper major style4"><span class="label">Zipped File</span></span></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="/src/assets/images/joy1.png" alt="" /></div><div class="content">
-								<a href="#"><h2>Joy</h2></a>
-								<p>joy40217</p>
-								<p class="text-block">
-									負責指令及資料包撰寫、材質包轉換(版本升級/Java和Bedrock轉換)。<br/>
-									偶爾畫點簡單的材質，興趣是寫程式。
-								</p>
-								<ul class="icons">
-									<li><a href="https://www.instagram.com/joy40217.mc" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-instagram" title="joy40217.mc"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.threads.com/@joy40217.mc" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-threads" title="joy40217.mc"><span class="label">Threads</span></a></li>
-									<li><a class="icon fa-brands fa-discord copyText" title="joy40217"><span class="label">Discord</span></a></li>
-									<li><a href="https://github.com/joy40217-mc" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-github" title="joy40217-mc"><span class="label">Github</span></a></li>
-									<li><a href="mailto:joy40217.26@gmail.com" class="icon fa-solid fa-envelope" title="joy40217.26@gmail.com"><span class="label">Email</span></a></li>
-								</ul>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="/src/assets/images/annie1.png" alt="" /></div><div class="content">
-								<a href="#"><h2>安妮</h2></a>
-								<p>annielllovo</p>
-								<p class="text-block">
-									負責建築、材質繪畫、地圖劇情及流程發想。<br/>
-									有時也會畫各種圖文插畫或Line貼圖。
-								</p>
-								<ul class="icons">
-									<li><a href="https://www.instagram.com/little.ou_fish" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-instagram" title="little.ou_fish"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.threads.com/@little.ou_fish" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-threads" title="little.ou_fish"><span class="label">Threads</span></a></li>
-									<li><a class="icon fa-brands fa-discord copyText" title="annielllovo"><span class="label">Discord</span></a></li>
-									<li><a href="https://store.line.me/stickershop/author/3933340" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-line" title="Line Stickers"><span class="label">Line Stickers</span></a></li>
-								</ul>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="/src/assets/images/lups1.png" alt="" /></div><div class="content">
-								<a href="#"><h2>蘑菇</h2></a>
-								<p>lups90</p>
-								<p class="text-block">
-									負責指令撰寫、建築裝飾。<br/>
-									具程式背景，目前肝還很新鮮(?)
-								</p>
-								<ul class="icons">
-									<li><a href="https://www.instagram.com/doluheyo" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-instagram" title="doluheyo"><span class="label">Instagram</span></a></li>
-									<li><a href="https://www.threads.com/@doluheyo" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-threads" title="doluheyo"><span class="label">Threads</span></a></li>
-									<li><a class="icon fa-brands fa-discord copyText" title="doluheyo"><span class="label">Discord</span></a></li>
-								</ul>
-							</div>
-						</section>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Works</h2>
-								<p class="text-block">
-									歷年作品集<br />
-									(包含地圖、活動等)
-								</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-brands fa-fort-awesome">
-									<h3>69 Land</h3>
-									<a class="image fit hover-white" href="/projects/202510_69Land/"><p><img class="img-crop" src="/src/assets/images/projects/202510_69Land/69land.png" alt="" /><br />客製化遊樂園地圖</p></a>
-									<p>
-										<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2025/10/26-無限期</a><br />
-										<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
-									</p>
-									<a class="icon fa-solid fa-hashtag"></a><a>建築</a>
-								</li>
-								<li class="icon fa-solid fa-ghost">
-									<h3>Haunted House</h3>
-									<a class="image fit hover-white" href="/projects/202510_HauntedHouse/"><p><img class="img-crop" src="/src/assets/images/projects/202510_HauntedHouse/haunted.png" alt="" /><br />陸玖大宅</p></a>
-									<p>
-										<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2025/10/26-2025/11/31</a><br />
-										<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
-									</p>
-									<a class="icon fa-solid fa-hashtag"></a><a>建築、指令方塊</a>
-								</li>
-								<li class="icon fa-solid fa-egg">
-									<h3>Easter Egg Hunt</h3>
-									<a class="image fit hover-white" href="/projects/202604_EasterEggHunt/"><p><img class="img-crop" src="/src/assets/images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png" alt="" /><br />修蛋幾勒</p></a>
-									<p>
-										<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2026/04/05-2026/04/30</a><br />
-										<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
-									</p>
-									<a class="icon fa-solid fa-hashtag"></a><a>資料包</a>
-								</li>
-								<li class="icon fa-solid fa-dungeon">
-									<h3>Maze</h3>
-									<a class="image fit hover-white" href="/projects/202604_Maze/"><p><img class="img-crop" src="/src/assets/images/projects/202604_Maze/2026-04-25_18.47.58.png" alt="" /><br />咪宮</p></a>
-									<p>
-										<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2026/04/15-無限期</a><br />
-										<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
-									</p>
-									<a class="icon fa-solid fa-hashtag"></a><a>建築、指令方塊</a>
-								</li>
-								<li class="icon fa-solid fa-dharmachakra">
-									<h3>Lost Dreamland Paradise</h3>
-									<a class="image fit hover-white" href="/maps/202608_LostDreamlandParadise/"><p><img class="img-crop" src="/src/assets/images/pic01.jpg" alt="" /><br />失落的夢境樂園</p></a>
-									<a class="icon fa-solid fa-calendar" title="發布日期"></a><a>Comming Soon</a><br />
-									<p><a class="icon fa-solid fa-link"></a><a class="hover-white" href="/Maps/202608_LostDreamlandParadise/">下載頁面</a></p>
-									<a class="icon fa-solid fa-hashtag"></a><a>地圖、指令方塊、資料包、材質包</a>
-								</li>
-								<li class="icon fa-solid fa-ghost">
-									<h3>Haunted House</h3>
-									<a class="image fit hover-white" href="/maps/202510_HauntedHouse/"><p><img class="img-crop" src="/src/assets/images/pic01.jpg" alt="" /><br />鬼屋</p></a>
-									<a class="icon fa-solid fa-calendar" title="發布日期"></a><a>Comming Soon</a><br />
-									<p><a class="icon fa-solid fa-link"></a><a class="hover-white" href="/Maps/202510_HauntedHouse/">下載頁面</a></p>
-									<a class="icon fa-solid fa-hashtag"></a><a>地圖、資料包</a>
-								</li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Download map</h2>
-								<p>下載Minecraft地圖</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="/Maps/202608_LostDreamlandParadise/" class="button fit primary">Newest Map</a></li>
-								<li><a href="/Maps/" class="button fit">Learn More</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://github.com/sra-studio" class="icon fa-brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
-							<li><a href="https://forms.gle/6JYrZwiZPHqsZ7ZB6" class="icon fa-solid fa-paper-plane" target="_blank" rel="noopener noreferrer"><span class="label">Contact</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; 2026 SRA Studio. All rights reserved.</li><li>Page Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-
-			</div>
-
-		<div id="copyPopup" class="popup"><a class="icon fa-solid fa-check"></a> 已將文字複製到剪貼簿</div>
-		
-		<div class="scroll-buttons">
-			<a href="#banner" class="icon fa-solid fa-up-long more scrolly"><span class="label">Scroll Up</span></a>
-			<a href="#footer" class="icon fa-solid fa-down-long more scrolly"><span class="label">Scroll Down</span></a>
-		</div>`;
 ---
-<BaseLayout
-  title="SRA Studio"
-  bodyClass="landing is-preload"
-  includeCopyText={true}
-  includeBackground={false}
-  includeSearchPage={false}
-  includeCopyCode={false}
-  includeSpoilerToggle={false}
->
-  <Fragment set:html={bodyHtml} />
-</BaseLayout>
+<HomePageLayout pageTitle={pageTitle}>
+	<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<h2>SRA Studio</h2>
+				<p class="text-block">
+					Minecraft maps, resourcepacks, datapacks, plugins<br/>
+					since 2026
+				</p>
+				
+				<ul class="actions special">
+					<li><a href="https://forms.gle/6JYrZwiZPHqsZ7ZB6" target="_blank" rel="noopener noreferrer" class="button primary">Contact Us</a></li>
+				</ul>
+			</div>
+			<a href="#one" class="more scrolly">Learn More</a>
+		</section>
+	<!-- One -->
+		<section id="one" class="wrapper style1 special">
+			<div class="inner">
+				<header class="major">
+					<h2>About Us<br /></h2>
+					<p class="text-block">
+						來自臺灣的小團隊，由一群對Minecraft有熱情的朋友組成。<br />
+						希望能做出一些高品質的地圖。偶爾也會自製材質包、資料包和插件。
+					</p>
+
+					<p class="text-block">
+						We are a team from Taiwan, composed of a group of friends who are passionate about Minecraft.<br />
+						Our goal is to create high-quality maps. We also accasionally create resourcepacks, datapacks and plugins.
+					</p>
+				</header>
+				<ul class="icons">
+					<li><span class="icon fa-solid fa-users major style1"><span class="label">Users</span></span></li>
+					<li></li>
+					<li><span class="icon fa-solid fa-cubes major style2"><span class="label">Cubes</span></span></li>
+					<li></li>
+					<li><span class="icon fa-solid fa-terminal major style3"><span class="label">Terminal</span></span></li>
+					<li></li>
+					<li><span class="icon fa-solid fa-file-zipper major style4"><span class="label">Zipped File</span></span></li>
+				</ul>
+			</div>
+		</section>
+
+	<!-- Two -->
+		<section id="two" class="wrapper alt style2">
+			<section class="spotlight">
+				<div class="image"><img src={Joy.src} alt="" /></div><div class="content">
+					<a href="#"><h2>Joy</h2></a>
+					<p>joy40217</p>
+					<p class="text-block">
+						負責指令及資料包撰寫、材質包轉換(版本升級/Java和Bedrock轉換)。<br/>
+						偶爾畫點簡單的材質，興趣是寫程式。
+					</p>
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/joy40217.mc" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-instagram" title="joy40217.mc"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.threads.com/@joy40217.mc" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-threads" title="joy40217.mc"><span class="label">Threads</span></a></li>
+						<li><a class="icon fa-brands fa-discord copyText" title="joy40217"><span class="label">Discord</span></a></li>
+						<li><a href="https://github.com/joy40217-mc" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-github" title="joy40217-mc"><span class="label">Github</span></a></li>
+						<li><a href="mailto:joy40217.26@gmail.com" class="icon fa-solid fa-envelope" title="joy40217.26@gmail.com"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image"><img src={Annie.src} alt="" /></div><div class="content">
+					<a href="#"><h2>安妮</h2></a>
+					<p>annielllovo</p>
+					<p class="text-block">
+						負責建築、材質繪畫、地圖劇情及流程發想。<br/>
+						有時也會畫各種圖文插畫或Line貼圖。
+					</p>
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/little.ou_fish" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-instagram" title="little.ou_fish"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.threads.com/@little.ou_fish" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-threads" title="little.ou_fish"><span class="label">Threads</span></a></li>
+						<li><a class="icon fa-brands fa-discord copyText" title="annielllovo"><span class="label">Discord</span></a></li>
+						<li><a href="https://store.line.me/stickershop/author/3933340" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-line" title="Line Stickers"><span class="label">Line Stickers</span></a></li>
+					</ul>
+				</div>
+			</section>
+			<section class="spotlight">
+				<div class="image"><img src={Lups.src} alt="" /></div><div class="content">
+					<a href="#"><h2>蘑菇</h2></a>
+					<p>lups90</p>
+					<p class="text-block">
+						負責指令撰寫、建築裝飾。<br/>
+						具程式背景，目前肝還很新鮮(?)
+					</p>
+					<ul class="icons">
+						<li><a href="https://www.instagram.com/doluheyo" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-instagram" title="doluheyo"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.threads.com/@doluheyo" target="_blank" rel="noopener noreferrer" class="icon fa-brands fa-threads" title="doluheyo"><span class="label">Threads</span></a></li>
+						<li><a class="icon fa-brands fa-discord copyText" title="doluheyo"><span class="label">Discord</span></a></li>
+					</ul>
+				</div>
+			</section>
+		</section>
+
+	<!-- Three -->
+		<section id="three" class="wrapper style3 special">
+			<div class="inner">
+				<header class="major">
+					<h2>Works</h2>
+					<p class="text-block">
+						歷年作品集<br />
+						(包含地圖、活動等)
+					</p>
+				</header>
+				<ul class="features">
+					<li class="icon fa-brands fa-fort-awesome">
+						<h3>69 Land</h3>
+						<a class="image fit hover-white" href="/projects/202510_69Land"><p><img class="img-crop" src={Img_202510_69Land.src} alt="" /><br />客製化遊樂園地圖</p></a>
+						<p>
+							<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2025/10/26-無限期</a><br />
+							<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
+						</p>
+						<a class="icon fa-solid fa-hashtag"></a><a>建築</a>
+					</li>
+					<li class="icon fa-solid fa-ghost">
+						<h3>Haunted House</h3>
+						<a class="image fit hover-white" href="/projects/202510_HauntedHouse"><p><img class="img-crop" src={Img_202510_HauntedHouse.src} alt="" /><br />陸玖大宅</p></a>
+						<p>
+							<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2025/10/26-2025/11/31</a><br />
+							<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
+						</p>
+						<a class="icon fa-solid fa-hashtag"></a><a>建築、指令方塊</a>
+					</li>
+					<li class="icon fa-solid fa-egg">
+						<h3>Easter Egg Hunt</h3>
+						<a class="image fit hover-white" href="/projects/202604_EasterEggHunt"><p><img class="img-crop" src={Img_202604_EasterEggHunt.src} alt="" /><br />修蛋幾勒</p></a>
+						<p>
+							<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2026/04/05-2026/04/30</a><br />
+							<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
+						</p>
+						<a class="icon fa-solid fa-hashtag"></a><a>資料包</a>
+					</li>
+					<li class="icon fa-solid fa-dungeon">
+						<h3>Maze</h3>
+						<a class="image fit hover-white" href="/projects/202604_Maze"><p><img class="img-crop" src={Img_202604_Mase.src} alt="" /><br />咪宮</p></a>
+						<p>
+							<a class="icon fa-solid fa-calendar-days" title="活動日期"></a><a>2026/04/15-無限期</a><br />
+							<a class="icon fa-solid fa-location-dot"></a><a>69社伺服器</a>
+						</p>
+						<a class="icon fa-solid fa-hashtag"></a><a>建築、指令方塊</a>
+					</li>
+					<li class="icon fa-solid fa-dharmachakra">
+						<h3>Lost Dreamland Paradise</h3>
+						<a class="image fit hover-white" href="/maps/202608_LostDreamlandParadise"><p><img class="img-crop" src={Pic01.src} alt="" /><br />失落的夢境樂園</p></a>
+						<a class="icon fa-solid fa-calendar" title="發布日期"></a><a>Comming Soon</a><br />
+						<p><a class="icon fa-solid fa-link"></a><a class="hover-white" href="/Maps/202608_LostDreamlandParadise/">下載頁面</a></p>
+						<a class="icon fa-solid fa-hashtag"></a><a>地圖、指令方塊、資料包、材質包</a>
+					</li>
+					<li class="icon fa-solid fa-ghost">
+						<h3>Haunted House</h3>
+						<a class="image fit hover-white" href="/maps/202510_HauntedHouse"><p><img class="img-crop" src={Pic01.src} alt="" /><br />鬼屋</p></a>
+						<a class="icon fa-solid fa-calendar" title="發布日期"></a><a>Comming Soon</a><br />
+						<p><a class="icon fa-solid fa-link"></a><a class="hover-white" href="/Maps/202510_HauntedHouse/">下載頁面</a></p>
+						<a class="icon fa-solid fa-hashtag"></a><a>地圖、資料包</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+	<!-- CTA -->
+		<section id="cta" class="wrapper style4">
+			<div class="inner">
+				<header>
+					<h2>Download map</h2>
+					<p>下載Minecraft地圖</p>
+				</header>
+				<ul class="actions stacked">
+					<li><a href="/maps/202608_LostDreamlandParadise/" class="button fit primary">Newest Map</a></li>
+					<li><a href="/maps/" class="button fit">Learn More</a></li>
+				</ul>
+			</div>
+		</section>
+</HomePageLayout>

@@ -1,0 +1,91 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/css/main.css';
+import nonscript from '../styles/css/noscript.css?url';
+
+// Font Awesome Icons
+import '../styles/fontawesome/css/fontawesome.css';
+import '../styles/fontawesome/css/brands.css';
+import '../styles/fontawesome/css/solid.css';
+
+// Web Icon
+import Icon from '../images/icon_64x64.png';
+import IconSRA from '../images/icon_sra.png';
+
+// Scripts
+import jqueryUrl from '../styles/js/jquery.min.js?url';
+import scrollexUrl from '../styles/js/jquery.scrollex.min.js?url';
+import scrollyUrl from '../styles/js/jquery.scrolly.min.js?url';
+import browserUrl from '../styles/js/browser.min.js?url';
+import breakpointsUrl from '../styles/js/breakpoints.min.js?url';
+import utilUrl from '../styles/js/util.js?url';
+import mainUrl from '../styles/js/main.js?url';
+
+const { pageTitle } = Astro.props;
+
+---
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <title>{pageTitle}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <noscript>
+		<link rel="stylesheet" href={nonscript} />
+	</noscript>
+
+    <!-- Web Icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href={Icon.src}>
+    <link rel="icon" type="image/png" sizes="16x16" href={Icon.src}>
+    <link rel="icon" type="image/png" sizes="180x180" href={IconSRA.src}>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7PQGZVBBD"></script>
+		<script is:inline>
+      		window.dataLayer = window.dataLayer || [];
+      		function gtag(){dataLayer.push(arguments);}
+      		gtag('js', new Date());
+
+      		gtag('config', 'G-F7PQGZVBBD')
+    	</script>
+
+  	</head>
+  	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<Header pageTitle={pageTitle} />
+                
+                <slot />
+
+				<Footer />
+
+			</div>
+
+		<!-- Scripts -->
+			<script is:inline src={jqueryUrl}></script>
+			<script is:inline src={scrollexUrl}></script>
+			<script is:inline src={scrollyUrl}></script>
+			<script is:inline src={browserUrl}></script>
+			<script is:inline src={breakpointsUrl}></script>
+			<script is:inline src={utilUrl}></script>
+			<script is:inline src={mainUrl}></script>
+
+			<!-- Google AdSense -->
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2260487722232602"crossorigin="anonymous"></script>
+			
+			<!-- Add on -->
+			<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+			<script>
+				import '../styles/js/search.js'
+			</script>
+	</body>
+</html>

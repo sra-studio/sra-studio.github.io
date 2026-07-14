@@ -2,36 +2,36 @@
   {
     "title": "69 Land",
     "category": "Project",
-    "url": "/projects/202510_69Land/",
+    "url": "/projects/202510_69Land",
     "description": "69遊樂園 | 客製化遊樂園地圖",
-    "img": "./src/assets/images/projects/202510_69Land/69land.png",
+    "img": "../images/projects/202510_69Land/69land.png",
     "hashtag": "建築",
     "tag": "遊樂園"
   },
   {
     "title": "Haunted House",
     "category": "Project",
-    "url": "/projects/202510_HauntedHouse/",
+    "url": "/projects/202510_HauntedHouse",
     "description": "陸玖大宅 | 萬聖節鬼屋",
-    "img": "./src/assets/images/projects/202510_HauntedHouse/haunted.png",
+    "img": "/images/projects/202510_HauntedHouse/haunted.png",
     "hashtag": "建築、指令方塊",
     "tag": "萬聖節、鬼屋"
   },
   {
     "title": "Easter Egg Hunt",
     "category": "Project",
-    "url": "/projects/202604_EasterEggHunt/",
+    "url": "/projects/202604_EasterEggHunt",
     "description": "修蛋幾勒 | 復活節找蛋活動",
-    "img": "./src/assets/images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png",
+    "img": "/images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png",
     "hashtag": "資料包",
     "tag": "復活節、復活蛋"
   },
   {
     "title": "Maze",
     "category": "Project",
-    "url": "/projects/202604_Maze/",
+    "url": "/projects/202604_Maze",
     "description": "咪宮 | 遊樂園迷宮",
-    "img": "./src/assets/images/projects/202604_Maze/2026-04-25_18.47.58.png",
+    "img": "/images/projects/202604_Maze/2026-04-25_18.47.58.png",
     "hashtag": "建築、指令方塊",
     "tag": "遊樂園、迷宮"
   },
@@ -39,18 +39,18 @@
   {
     "title": "Lost Dreamland Paradise",
     "category": "Map",
-    "url": "/maps/202608_LostDreamlandParadise/",
+    "url": "/maps/202608_LostDreamlandParadise",
     "description": "失落的夢境樂園",
-    "img": "./src/assets/images/pic01.jpg",
+    "img": "/images/pic01.jpg",
     "hashtag": "地圖、指令方塊、資料包、材質包",
     "tag": "遊樂園、多人、解謎"
   },
   {
     "title": "Haunted House",
     "category": "Map",
-    "url": "/maps/202510_HauntedHouse/",
+    "url": "/maps/202510_HauntedHouse",
     "description": "鬼屋",
-    "img": "./src/assets/images/pic02.jpg",
+    "img": "../../images/pic02.jpg",
     "hashtag": "地圖、資料包",
     "tag": "鬼屋、多人、劇情導向、微解謎"
   }

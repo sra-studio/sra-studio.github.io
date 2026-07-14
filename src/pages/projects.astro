@@ -1,107 +1,55 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import GenericLayout from '../layouts/GenericLayout.astro';
+const pageTitle = "SRA Studio";
+const mainTitle = "Maps";
+const subTitle = "Minecraft地圖集";
 
-const bodyHtml = `<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="/">SRA Studio</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><input type="text" class="searchBox" placeholder="Search..." /></li>
-
-											<li><a href="/">Home</a></li>
-											<li><a href="/projects/">Projects</a></li>
-                                            <li><a href="/maps/">Maps</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<article id="main">
-						<header class="default">
-							<h2>Projects</h2>
-							<p>Minecraft專案集</p>
-						</header>
-						<section class="tiles">
-
-									<article><a href="/projects/202510_69Land/" class="link">
-										<span class="image">
-											<img src="/src/assets/images/projects/202510_69Land/69land.png" alt="" />
-										</span>
-										<header class="major">
-											<h3>69 Land</h3>
-											<p>69遊樂園 | 客製化遊樂園地圖</p>
-										</header>
-									</a></article>
-
-									<article><a href="/projects/202510_HauntedHouse/" class="link">
-										<span class="image">
-											<img src="/src/assets/images/projects/202510_HauntedHouse/haunted.png" alt="" />
-										</span>
-										<header class="major">
-											<h3>Haunted House</h3>
-											<p>陸玖大宅 | 萬聖節鬼屋</p>
-										</header>
-									</a></article>
-
-									<article><a href="/projects/202604_EasterEggHunt/" class="link">
-										<span class="image">
-											<img src="/src/assets/images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png" alt="" />
-										</span>
-										<header class="major">
-											<h3>Easter Egg Hunt</h3>
-											<p>修蛋幾勒 | 復活節找蛋活動</p>
-										</header>
-									</a></article>
-
-									<article><a href="/projects/202604_Maze/" class="link">
-										<span class="image">
-											<img src="/src/assets/images/projects/202604_Maze/2026-04-25_18.47.58.png" alt="" />
-										</span>
-										<header class="major">
-											<h3>Maze</h3>
-											<p>咪宮 | 遊樂園迷宮</p>
-										</header>
-									</a></article>
-
-								</section>
-					</article>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://github.com/sra-studio" class="icon fa-brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
-							<li><a href="https://forms.gle/6JYrZwiZPHqsZ7ZB6" class="icon fa-solid fa-paper-plane" target="_blank" rel="noopener noreferrer"><span class="label">Contact</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; 2026 SRA Studio. All rights reserved.</li><li>Page Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-
-			</div>
-		
-		<div class="scroll-buttons">
-			<a href="#main" class="icon fa-solid fa-up-long more scrolly"><span class="label">Scroll Up</span></a>
-			<a href="#footer" class="icon fa-solid fa-down-long more scrolly"><span class="label">Scroll Down</span></a>
-		</div>`;
+import Img_202510_69Land from '../images/projects/202510_69Land/69land.png';
+import Img_202510_HauntedHouse from '../images/projects/202510_HauntedHouse/haunted.png';
+import Img_202604_EasterEggHunt from '../images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png';
+import Img_202604_Mase from '../images/projects/202604_Maze/2026-04-25_18.47.58.png';
 ---
-<BaseLayout
-  title="SRA Studio | Projects"
-  bodyClass="is-preload"
-  includeCopyText={false}
-  includeBackground={false}
-  includeSearchPage={false}
-  includeCopyCode={false}
-  includeSpoilerToggle={false}
->
-  <Fragment set:html={bodyHtml} />
-</BaseLayout>
+<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle}>
+    <section class="tiles">
+        <article><a href="/projects/202510_69Land" class="link">
+            <span class="image">
+                <img src={Img_202510_69Land.src} alt="" />
+            </span>
+            <header class="major">
+                <h3>69 Land</h3>
+                <p>69遊樂園 | 客製化遊樂園地圖</p>
+            </header>
+        </a></article>
+
+        <article><a href="/projects/202510_HauntedHouse" class="link">
+            <span class="image">
+                <img src={Img_202510_HauntedHouse.src} alt="" />
+            </span>
+            <header class="major">
+                <h3>Haunted House</h3>
+                <p>陸玖大宅 | 萬聖節鬼屋</p>
+            </header>
+        </a></article>
+
+        <article><a href="/projects/202604_EasterEggHunt" class="link">
+            <span class="image">
+                <img src={Img_202604_EasterEggHunt.src} alt="" />
+            </span>
+            <header class="major">
+                <h3>Easter Egg Hunt</h3>
+                <p>修蛋幾勒 | 復活節找蛋活動</p>
+            </header>
+        </a></article>
+
+        <article><a href="/projects/202604_Maze" class="link">
+            <span class="image">
+                <img src={Img_202604_Mase.src} alt="" />
+            </span>
+            <header class="major">
+                <h3>Maze</h3>
+                <p>咪宮 | 遊樂園迷宮</p>
+            </header>
+        </a></article>
+
+    </section>
+</GenericLayout>
