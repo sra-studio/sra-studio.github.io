@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import GenericLayout from '../layouts/GenericLayout.astro';
 const pageTitle = "SRA Studio";
 const mainTitle = "Maps";
@@ -13,7 +14,7 @@ import Img_202604_Mase from '../images/projects/202604_Maze/2026-04-25_18.47.58.
     <section class="tiles">
         <article><a href="/projects/202510_69Land" class="link">
             <span class="image">
-                <img src={Img_202510_69Land.src} alt="" />
+                <Image src={Img_202510_69Land} alt="" />
             </span>
             <header class="major">
                 <h3>69 Land</h3>
@@ -23,7 +24,7 @@ import Img_202604_Mase from '../images/projects/202604_Maze/2026-04-25_18.47.58.
 
         <article><a href="/projects/202510_HauntedHouse" class="link">
             <span class="image">
-                <img src={Img_202510_HauntedHouse.src} alt="" />
+                <Image src={Img_202510_HauntedHouse} alt="" />
             </span>
             <header class="major">
                 <h3>Haunted House</h3>
@@ -33,7 +34,7 @@ import Img_202604_Mase from '../images/projects/202604_Maze/2026-04-25_18.47.58.
 
         <article><a href="/projects/202604_EasterEggHunt" class="link">
             <span class="image">
-                <img src={Img_202604_EasterEggHunt.src} alt="" />
+                <Image src={Img_202604_EasterEggHunt} alt="" />
             </span>
             <header class="major">
                 <h3>Easter Egg Hunt</h3>
@@ -43,7 +44,7 @@ import Img_202604_Mase from '../images/projects/202604_Maze/2026-04-25_18.47.58.
 
         <article><a href="/projects/202604_Maze" class="link">
             <span class="image">
-                <img src={Img_202604_Mase.src} alt="" />
+                <Image src={Img_202604_Mase} alt="" />
             </span>
             <header class="major">
                 <h3>Maze</h3>

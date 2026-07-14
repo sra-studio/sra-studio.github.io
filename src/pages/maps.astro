@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import GenericLayout from '../layouts/GenericLayout.astro';
 const pageTitle = "SRA Studio";
 const mainTitle = "Maps";
@@ -11,7 +12,7 @@ import Pic02 from '../images/pic02.jpg';
     <section class="tiles">
         <article><a href="/maps/202608_LostDreamlandParadise" class="link">
             <span class="image">
-                <img src={Pic01.src} alt="" />
+                <Image src={Pic01} alt="" />
             </span>
             <header class="major">
                 <h3>Lost Dreamland Paradise</h3>
@@ -21,7 +22,7 @@ import Pic02 from '../images/pic02.jpg';
 
         <article><a href="/maps/202510_HauntedHouse" class="link">
             <span class="image">
-                <img src={Pic02.src} alt="" />
+                <Image src={Pic02} alt="" />
             </span>
             <header class="major">
                 <h3>Haunted House</h3>
