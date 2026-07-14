@@ -2131,6 +2131,7 @@ input, select, textarea {
 
 			.image.left img, .image.right img {
 				width: 100%;
+				height: auto;
 			}
 
 		.image.fit {
@@ -2141,6 +2142,7 @@ input, select, textarea {
 
 			.image.fit img {
 				width: 100%;
+				height: auto;
 			}
 
 
@@ -2702,6 +2704,7 @@ input, select, textarea {
 			.spotlight .image img {
 				border-radius: 0;
 				width: 100%;
+				height: auto;
 			}
 
 		.spotlight .content {
