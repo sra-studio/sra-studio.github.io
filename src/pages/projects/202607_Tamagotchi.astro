@@ -1,0 +1,194 @@
+---
+import { Image } from 'astro:assets';
+import GenericLayout from '../../layouts/GenericLayout.astro';
+import ServerInfo from '../../components/69ClubServer.astro';
+const pageTitle = "SRA Studio | Projects";
+const mainTitle = "Tamagotchi";
+const subTitle = "2026夏日活動-我的好雞友";
+
+import Img1 from '../../images/projects/202607_Tamagotchi/2026-07-10_00.26.01.png';
+import Img2 from '../../images/projects/202607_Tamagotchi/2026-07-10_00.22.17.png';
+import Img3 from '../../images/projects/202607_Tamagotchi/2026-07-10_19.58.08.png';
+import Img4 from '../../images/projects/202607_Tamagotchi/2026-07-10_19.57.40.png';
+import Img5 from '../../images/projects/202607_Tamagotchi/2026-07-10_00.24.37.png';
+import Img6 from '../../images/projects/202607_Tamagotchi/2026-07-10_00.24.53.png';
+import Img7 from '../../images/projects/202607_Tamagotchi/2026-07-10_00.24.25.png';
+import Img8 from '../../images/projects/202607_Tamagotchi/2026-07-10_20.04.48.png';
+import Img9 from '../../images/projects/202607_Tamagotchi/2026-07-11_22.41.52.png';
+import Img10 from '../../images/projects/202607_Tamagotchi/2026-07-11_22.48.07.png';
+
+---
+<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle}>
+    <section class="wrapper style5">
+        <div class="inner">
+            <h3>Introduction</h3>
+            <p>
+                位於六九社伺服器的限時活動<br />
+                想法來自於持修當時正在遊玩的電子雞<br />
+                透過Skript插件撰寫電子雞系統<br />
+                並結合Quests插件進行任務獎勵自動化發放
+            </p>
+
+            <p>
+                <a class="icon fa-solid fa-calendar-days" title="活動日期"></a> 2026/07/11-2026/08/31<br />
+                <a class="icon fa-solid fa-location-dot"></a>  <a href="#server-info" class="more scrolly no-underline content-link">69社伺服器</a><br />
+                <br />
+                <a class="icon fa-solid fa-hashtag"></a> 建築、Skript插件、Quests插件
+            </p>
+
+            <hr />
+            <header>
+            <h4>Images</h4>
+                <p>使用光影模組（Complementary Shaders - Unbound）拍攝</p>
+            </header>
+            <div class="box alt">
+                <div class="row gtr-50 gtr-uniform">
+                    <div class="col-12"><span class="image fit"><Image src={Img1} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img2} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img3} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img4} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img5} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img6} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img7} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img8} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img9} alt="" /></span></div>
+                    <div class="col-4"><span class="image fit"><Image src={Img10} alt="" /></span></div>
+                </div>
+            </div>
+            
+            <hr />
+            <h4>CREDITS</h4>
+            <table>
+            <tr>
+                <th>參與成員</th>
+                <th>工作內容</th>
+            </tr>
+            <tr>
+                <td>安妮 (annielllovo)</td>
+                <td>建築設計、創意發想</td>
+            </tr>
+            <tr>
+                <td>Joy (joy40217)</td>
+                <td>系統撰寫、物品製作</td>
+            </tr>
+            <tr>
+                <td>蘑菇 (lups90)</td>
+                <td>創意發想</td>
+            </tr>
+            </table>
+
+            <hr />
+            <header>
+                <h4>Hints</h4>
+                <p>
+                    包含電子雞的所有設定，請謹慎點擊。反黑的防雷條請利用框選的方式顯示內容。
+                </p>
+            </header>
+            <div class="spoiler toggle-mode row">
+                    <ul class="col-12">
+                        <li>
+                            <b class="spoiler-toggle">電子雞的食物</b>
+                            <div class="spoiler-content">
+                                <b>原版物品：</b><br />
+                                    <ul>
+                                        <li>種子類(<a class="spoiler-color-black">飽食度+1</a>)：小麥種子、南瓜種子、西瓜種子、甜菜種子</li>
+                                        <li>稀有種子類(<a class="spoiler-color-black">飽食度+5</a>)：火把花種子、瓶子草豆莢</li>
+                                        <li>作物類(<a class="spoiler-color-black">飽食度+3</a>)：小麥、蘋果、甜莓、甘蔗</li>
+                                        <li>食物類(<a class="spoiler-color-black">飽食度+5</a>)：麵包</li>
+                                        <li>
+                                            其他：<br />
+                                            毒馬鈴薯(<a class="spoiler-color-black">心情值-10/飽食度-5</a>)<br />
+                                            紅色蘑菇&棕色蘑菇(<a class="spoiler-color-black">飽食度-10~+10隨機</a>)<br />
+                                            水瓶(<a class="spoiler-color-black">心情值+1</a>)<br />
+                                            蜂蜜瓶(<a class="spoiler-color-black">心情值+5</a>)<br />
+                                            餅乾(<a class="spoiler-color-black">電子雞死亡</a>)<br />
+                                            雞蛋(<a class="spoiler-color-black">心情值歸零</a>)<br />
+                                            緋紅蕈菇&扭曲蕈菇(<a class="spoiler-color-black">飽食度-15~+5隨機</a>
+                                        </li>
+                                    </ul>
+
+                                <b>活動物品：</b><br />
+                                    <ul>
+                                        <li>特選麥種：<a class="spoiler-color-black">心情值+5/飽食度+5</a></li>
+                                        <li>特殊小麥：<a class="spoiler-color-black">心情值+5/飽食度+10</a></li>
+                                        <li>特製麵包：<a class="spoiler-color-black">心情值+5/飽食度+15</a></li>
+                                        <li>蜜香蘋果：<a class="spoiler-color-black">心情值+5/飽食度+10</a></li>
+                                        <li>純釀蜂蜜：<a class="spoiler-color-black">心情值+10/飽食度+5</a></li>
+                                    </ul>
+
+                                <b>活動藥水效果：</b><br />
+                                    <ul>
+                                        <li>愛情藥水：<a class="spoiler-color-black">顯示櫻花樹葉粒子效果10分鐘，藥水效果結束時飽食度-10</a></li>
+                                        <li>火熱藥水：<a class="spoiler-color-black">持續5分鐘，藥水效果結束時心情值-10</a></li>
+                                        <li>鳳梨蝦球精萃：<a class="spoiler-color-black">無</a></li>
+                                        <li>糖醋醬：<a class="spoiler-color-black">心情值減半</a></li>
+                                        <li>皮卡丘的汗：<a class="spoiler-color-black">心情值+10/飽食度+5</a></li>
+                                        <li>漱口水：<a class="spoiler-color-black">心情值+5/飽食度+5</a></li>
+                                        <li>巧克力牛奶：<a class="spoiler-color-black">心情值+10</a></li>
+                                        <li>雞冠一號：<br />
+                                            有生病：<a class="spoiler-color-black">生病效果消除，心情值+10</a><br />
+                                            沒生病：<a class="spoiler-color-black">心情值-5或心情值-10</a><br />
+                                        </li>
+                                        <li>香菜汁：<a class="spoiler-color-black">心情值-10</a></li>
+                                    </ul>
+
+                            </div>
+                        </li>
+                        <li>
+                            <b class="spoiler-toggle">基本設定</b>
+                            <div class="spoiler-content">
+                                <b>狀態改變：</b><br />
+                                    <ul>
+                                        <li>觸發條件：每半小時固定觸發一次</li>
+                                        <li>狀態效果：飽食度-2/心情值-5~+2隨機</li>
+                                    </ul>
+                                <b>粒子效果：</b><br />
+                                    <ul>
+                                        <li>觸發條件：每分鐘偵測</li>
+                                        <li>狀態效果：愛心粒子(心情值100)、生氣粒子(心情值小於30)、營火煙霧(需洗澡/大便未清理)</li>
+                                    </ul>
+                                <b>飽食度與心情值歸零：</b><br />
+                                    <ul>
+                                        <li>觸發條件：每半小時偵測</li>
+                                        <li>狀態效果：<br />
+                                            心情值歸零時，每半小時飽食度額外-5<br />
+                                            飽食度歸零時，電子雞死亡
+                                        </li>
+                                    </ul>
+                                <b>電子雞生病：</b><br />
+                                    <ul>
+                                        <li>觸發條件：出生後三天</li>
+                                        <li>狀態效果：每半小時心情值-2、飽食度-2</li>
+                                    </ul>
+                                <b>其他：</b><br />
+                                    <ul>
+                                        <li>離線三天：電子雞死亡</li>
+                                        <li>打電子雞：依照傷害量扣除心情值</li>
+                                    </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <b class="spoiler-toggle">互動類設定</b>
+                            <div class="spoiler-content">
+                                <b>電子雞洗澡：</b><br />
+                                    <ul>
+                                        <li>觸發條件：<a class="spoiler-color-black">和電子雞未互動3小時</a></li>
+                                        <li>狀態效果：<a class="spoiler-color-black">每半小時心情值-5</a></li>
+                                        <li>解除條件：<a class="spoiler-color-black">牽著電子雞，並將電子雞泡在水裡</a></li>
+                                    </ul>
+                                <b>電子雞大便：</b><br />
+                                    <ul>
+                                        <li>觸發條件：<a class="spoiler-color-black">和電子雞未互動3小時</a></li>
+                                        <li>狀態效果：<a class="spoiler-color-black">每半小時心情值-5</a></li>
+                                        <li>解除條件：<a class="spoiler-color-black">將大便撿起</a></li>
+                                    </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            <hr />
+            <ServerInfo />
+        </div>
+    </section>
+</GenericLayout>
