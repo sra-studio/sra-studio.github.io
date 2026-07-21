@@ -1,0 +1,14 @@
+---
+import PagefindConfig from "astro-pagefind/components/PagefindConfig.astro";
+
+---
+<PagefindConfig instance="searchbox" lang="zh-tw" placeholder="Search..."/>
+<pagefind-searchbox instance="searchbox" placeholder="Search..." id="searchbox"></pagefind-searchbox>
+
+
+<style is:global>
+    input::placeholder {
+        color:gray !important;
+        opacity: 1;
+    }
+</style>

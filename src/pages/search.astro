@@ -1,5 +1,6 @@
 ---
 import GenericLayout from '../layouts/GenericLayout.astro';
+import PagefindConfig from "astro-pagefind/components/PagefindConfig.astro";
 
 const pageTitle = "SRA Studio";
 const mainTitle = "Search Results";
@@ -9,7 +10,10 @@ const subTitle = "搜尋結果";
     <section class="wrapper style3">
         <div class="inner">
             <form id="searchForm">
-                <input type="text" class="searchBox" placeholder="Search..." />
+                <PagefindConfig instance="searchbar" lang="zh-tw" placeholder="Search..."/>
+                <pagefind-input instance="searchbar" placeholder="Search..." id="searchbar"></pagefind-input>
+                <pagefind-summary instance="searchbar"></pagefind-summary>
+
             </form>
             <header>
                 <p>
@@ -23,6 +27,7 @@ const subTitle = "搜尋結果";
             
             <h3></h3>
             <hr />
+            <pagefind-result instance="searchbar" id="results"></pagefind-result>
             <p id="none"></p>
         </div>
     </section>
@@ -30,8 +35,25 @@ const subTitle = "搜尋結果";
     <section class="tiles" id="results">
         
     </section>
-
-    <script>
-        import '../styles/js/search-page'
-    </script>
 </GenericLayout>
+
+
+<style is:global>
+  pagefind-results .pagefind-result {
+    display: inline-block;
+    width: 300px;
+    margin: 1em;
+    padding: 1em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  pagefind-results .pagefind-result-title {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  pagefind-results .pagefind-result-excerpt {
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
