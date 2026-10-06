@@ -1,66 +1,25 @@
 ---
 import { Image } from 'astro:assets';
 import GenericLayout from '../layouts/GenericLayout.astro';
+import { projects, projectUrl } from '../data/projects';
 const pageTitle = "SRA Studio";
 const mainTitle = "Projects";
 const subTitle = "Minecraft專案";
+const description = "SRA Studio 的 Minecraft 專案與活動作品集。";
 
-import Img_202510_69Land from '../images/projects/202510_69Land/69land.png';
-import Img_202510_HauntedHouse from '../images/projects/202510_HauntedHouse/haunted.png';
-import Img_202604_EasterEggHunt from '../images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png';
-import Img_202604_Mase from '../images/projects/202604_Maze/2026-04-25_18.47.58.png';
-import Img_202607_Tamagotchi from '../images/projects/202607_Tamagotchi/2026-07-10_00.26.01.png';
 ---
-<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle}>
+<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle} description={description}>
     <section class="tiles">
-        <article><a href="/projects/202510_69Land" class="link">
-            <span class="image">
-                <Image src={Img_202510_69Land} alt="" />
-            </span>
-            <header class="major">
-                <h3>69 Land</h3>
-                <p>69遊樂園 | 客製化遊樂園地圖</p>
-            </header>
-        </a></article>
-
-        <article><a href="/projects/202510_HauntedHouse" class="link">
-            <span class="image">
-                <Image src={Img_202510_HauntedHouse} alt="" />
-            </span>
-            <header class="major">
-                <h3>Haunted House</h3>
-                <p>陸玖大宅 | 萬聖節鬼屋</p>
-            </header>
-        </a></article>
-
-        <article><a href="/projects/202604_EasterEggHunt" class="link">
-            <span class="image">
-                <Image src={Img_202604_EasterEggHunt} alt="" />
-            </span>
-            <header class="major">
-                <h3>Easter Egg Hunt</h3>
-                <p>修蛋幾勒 | 復活節找蛋活動</p>
-            </header>
-        </a></article>
-
-        <article><a href="/projects/202604_Maze" class="link">
-            <span class="image">
-                <Image src={Img_202604_Mase} alt="" />
-            </span>
-            <header class="major">
-                <h3>Maze</h3>
-                <p>咪宮 | 遊樂園迷宮</p>
-            </header>
-        </a></article>
-
-        <article><a href="/projects/202607_Tamagotchi" class="link">
-            <span class="image">
-                <Image src={Img_202607_Tamagotchi} alt="" />
-            </span>
-            <header class="major">
-                <h3>Tamagotchi</h3>
-                <p>我的好雞友 | 電子雞遊戲</p>
-            </header>
-        </a></article>
+        {projects.map((project) => (
+            <article><a href={projectUrl(project)} class="link">
+                <span class="image">
+                    <Image src={project.cover} alt="" width={1280} widths={[640, 960, 1280]} sizes="(max-width: 736px) 100vw, 60vw" />
+                </span>
+                <header class="major">
+                    <h3>{project.title}</h3>
+                    <p>{project.subtitle} | {project.summary}</p>
+                </header>
+            </a></article>
+        ))}
     </section>
 </GenericLayout>

@@ -1,0 +1,49 @@
+---
+// 放在 <head> 裡的搜尋與分享預覽標籤（description、canonical、Open Graph）。
+// 用法：<Seo title={pageTitle} description="頁面簡介" image={Img1} />
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import DefaultImage from '../images/icon_sra.png';
+
+interface Props {
+	title: string;
+	/** 頁面簡介；沒有提供時使用下方的網站預設簡介 */
+	description?: string;
+	/** 分享預覽圖；沒有提供時使用網站圖示 */
+	image?: ImageMetadata;
+}
+
+const SITE_NAME = 'SRA Studio';
+const DEFAULT_DESCRIPTION = '來自臺灣的 Minecraft 創作團隊，製作高品質地圖，也自製材質包、資料包和插件。';
+const PREVIEW_WIDTH = 1200;
+
+const { title, description = DEFAULT_DESCRIPTION, image } = Astro.props;
+
+// 預覽圖：截圖轉成 JPG；預設的網站圖示有透明背景，所以維持 PNG
+const source = image ?? DefaultImage;
+const previewWidth = Math.min(source.width, PREVIEW_WIDTH);
+const previewHeight = Math.round((previewWidth * source.height) / source.width);
+const preview = await getImage({
+	src: source,
+	width: previewWidth,
+	format: image ? 'jpg' : 'png',
+});
+
+// 分享平台需要包含網域的完整網址
+const base = Astro.site ?? Astro.url;
+const pageUrl = new URL(Astro.url.pathname, base).href;
+const imageUrl = new URL(preview.src, base).href;
+---
+
+<meta name="description" content={description} />
+<link rel="canonical" href={pageUrl} />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="zh_TW" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={pageUrl} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:image:width" content={String(previewWidth)} />
+<meta property="og:image:height" content={String(previewHeight)} />
+<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />

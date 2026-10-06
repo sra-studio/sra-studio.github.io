@@ -1,24 +1,26 @@
 ---
-import { Image } from 'astro:assets';
 import GenericLayout from '../../layouts/GenericLayout.astro';
+import Gallery from '../../components/Gallery.astro';
 import ServerInfo from '../../components/69ClubServer.astro';
+import { getProject } from '../../data/projects';
 const pageTitle = "SRA Studio | Projects";
-const mainTitle = "Easter Egg Hunt";
-const subTitle = "修蛋幾勒";
 
-import Img1 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.png';
-import Img2 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.01.09.png';
-import Img3 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.02.25.png';
-import Img4 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.02.48.png';
-import Img5 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.03.24.png';
-import Img6 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.04.04.png';
-import Img7 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.04.44.png';
-import Img8 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.05.08.png';
-import Img9 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.05.47.png';
-import Img10 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.09.32.png';
+// 名稱、簡介、封面圖、日期、標籤等基本資料集中在 src/data/projects.ts
+const project = getProject('202604_EasterEggHunt');
+
+import Img1 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.01.45.webp';
+import Img2 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.01.09.webp';
+import Img3 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.02.25.webp';
+import Img4 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.02.48.webp';
+import Img5 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.03.24.webp';
+import Img6 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.04.04.webp';
+import Img7 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.04.44.webp';
+import Img8 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.05.08.webp';
+import Img9 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.05.47.webp';
+import Img10 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.09.32.webp';
 
 ---
-<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle}>
+<GenericLayout pageTitle={pageTitle} mainTitle={project.title} subTitle={project.subtitle} description={project.description} image={project.cover} imagePosition={project.coverPosition}>
     <section class="wrapper style5">
         <div class="inner">
             <h3>Introduction</h3>
@@ -29,10 +31,10 @@ import Img10 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.09.3
             </p>
 
             <p>
-                <a class="icon fa-solid fa-calendar-days" title="活動日期"></a> 2026/04/05-2026/04/30<br />
-                <a class="icon fa-solid fa-location-dot"></a>  <a href="#server-info" class="more scrolly no-underline content-link">69社伺服器</a><br />
+                <span class="icon fa-solid fa-calendar-days" title="活動日期"></span> {project.period}<br />
+                <span class="icon fa-solid fa-location-dot"></span>  <a href="#server-info" class="more scrolly no-underline content-link">{project.location}</a><br />
                 <br />
-                <a class="icon fa-solid fa-hashtag"></a> 資料包
+                <span class="icon fa-solid fa-hashtag"></span> {project.tags}
             </p>
 
             <hr />
@@ -40,20 +42,7 @@ import Img10 from '../../images/projects/202604_EasterEggHunt/2026-05-02_22.09.3
             <h4>Images</h4>
                 <p>使用光影模組（Complementary Shaders - Unbound）拍攝</p>
             </header>
-            <div class="box alt">
-                <div class="row gtr-50 gtr-uniform">
-                    <div class="col-12"><span class="image fit"><Image src={Img1} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img2} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img3} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img4} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img5} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img6} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img7} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img8} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img9} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Img10} alt="" /></span></div>
-                </div>
-            </div>
+            <Gallery title={project.title} images={[Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9, Img10]} />
             
             <hr />
             <h4>CREDITS</h4>

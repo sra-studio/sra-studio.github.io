@@ -1,6 +1,4 @@
 
-@import url(/src/styles/fontawesome/css/fontawesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 
 /*
 	Spectral by HTML5 UP
@@ -3019,10 +3017,12 @@ input, select, textarea {
 				font-family: "Font Awesome 7 Free";
 			}
 			
-			.wrapper.style3 a {
+			/* .meta：卡片上不是連結的文字與小圖示（日期、地點、標籤），外觀和這一區的連結相同 */
+			.wrapper.style3 a,
+			.wrapper.style3 .meta {
 				text-decoration: none;
 				border: none;
-				font-family: 'Noto Sans TC', serif;
+				font-family: 'Noto Sans TC', "Open Sans", Helvetica, sans-serif;
 				font-weight: 500;
 				line-height: normal;
 			}
@@ -4167,6 +4167,22 @@ input, select, textarea {
 	text-align: center;
 }
 
+		/* 頁面有自己的頁首圖時（GenericLayout 的 image）：圖片網址由 --header-image 帶入，
+		   要對準圖片的哪個位置由 GenericLayout 的 imagePosition 決定（預設正中央）。
+		   用 scroll 而不是 fixed，才會顯示圖片中央，而不是只露出最上面一段。 */
+		#main > header.has-image {
+			background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--header-image);
+			background-attachment: scroll;
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#main > header.has-image {
+				background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--header-image-small);
+			}
+
+		}
+
 		#main > header h2 {
 			font-size: 2em;
 			margin: 0 0 0.5em 0;
@@ -4414,6 +4430,12 @@ input, select, textarea {
 .spoiler-color-black {
 	color:#000000;
 	background-color: #000000;
+	cursor: pointer; /* 提示可點擊 */
+}
+
+/* 點一下顯示內容、再點一下隱藏（由 spoiler-toggle.js 切換這個 class） */
+.spoiler-color-black.is-revealed {
+	color: #ffffff;
 }
 
 .text-with-leftimage {

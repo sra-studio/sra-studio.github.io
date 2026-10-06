@@ -1,0 +1,84 @@
+---
+import GenericLayout from '../layouts/GenericLayout.astro';
+const pageTitle = "SRA Studio";
+const mainTitle = "Privacy Policy";
+const subTitle = "隱私權政策";
+const description = "說明瀏覽 SRA Studio 網站時，哪些資料會被收集，以及這些資料如何被使用。";
+
+// 內容有修改時，請一併更新這個日期
+const lastUpdated = "2026 年 10 月 6 日";
+---
+<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle} description={description}>
+    <section class="wrapper style5">
+        <div class="inner">
+            <p>最後更新：{lastUpdated}</p>
+
+            <p>
+                本網站（sra-studio.github.io）由 SRA Studio 經營。這一頁說明你瀏覽本網站時，哪些資料會被收集，以及這些資料如何被使用。
+            </p>
+
+            <hr />
+            <h3>我們自己收集的資料</h3>
+            <p>
+                本網站是靜態網站，沒有會員、登入或留言功能，我們不會要求你提供姓名、電子郵件等個人資料，也沒有自己的資料庫儲存訪客資料。
+            </p>
+            <p>
+                網站託管於 GitHub Pages。GitHub 可能會基於安全與維運目的記錄訪客的 IP 位址等連線資訊，詳情請見
+                <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub 的隱私權聲明</a>。
+            </p>
+
+            <hr />
+            <h3>第三方服務</h3>
+            <p>本網站使用下列由 Google 提供的服務，這些服務可能會在你的瀏覽器儲存 cookie 或取得你的連線資訊。</p>
+
+            <h4>Google Analytics（流量統計）</h4>
+            <p>
+                我們使用 Google Analytics 了解網站的造訪人數與瀏覽情況，例如瀏覽了哪些頁面、使用的裝置與瀏覽器類型、大略的所在地區。這些資料是彙整後的統計，我們無法用它辨識你是誰。
+                如果不希望被統計，可以安裝
+                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics 不透露資訊瀏覽器外掛程式</a>。
+            </p>
+
+            <h4>Google AdSense（廣告）</h4>
+            <p>
+                本網站載入了 Google AdSense，可能會顯示廣告。包括 Google 在內的第三方廠商會使用 cookie，根據你先前造訪本網站或其他網站的紀錄來放送廣告。
+            </p>
+            <ul>
+                <li>你可以到 <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google 廣告設定</a> 停用個人化廣告。</li>
+                <li>你也可以到 <a href="https://www.aboutads.info/choices" target="_blank" rel="noopener noreferrer">www.aboutads.info</a> 停用其他第三方廠商用於個人化廣告的 cookie。</li>
+                <li>想進一步了解，請參考 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google 如何使用來自合作夥伴網站的資訊</a>。</li>
+            </ul>
+
+            <h4>Google Fonts（字型）</h4>
+            <p>
+                網站的字型由 Google Fonts 提供。載入字型時，你的瀏覽器會連線到 Google 的伺服器，因此 Google 會取得你的 IP 位址。
+            </p>
+
+            <h4>Google 表單（聯絡與意見回饋）</h4>
+            <p>
+                「聯絡我們」和意見回饋使用 Google 表單。你在表單中填寫的內容會儲存在 Google，我們只會用來回覆你，以及改進我們的作品。
+            </p>
+
+            <hr />
+            <h3>站內搜尋</h3>
+            <p>站內搜尋完全在你的瀏覽器中執行，搜尋的關鍵字不會傳送給我們。</p>
+
+            <h3>外部連結</h3>
+            <p>
+                本網站有連往 Instagram、Threads、Discord、YouTube、Notion、LINE 等外部網站的連結。離開本網站後，適用的是各該網站自己的隱私權政策。
+            </p>
+
+            <h3>管理 cookie</h3>
+            <p>
+                你可以在瀏覽器的設定中封鎖或刪除 cookie。封鎖後仍然可以正常瀏覽本網站的所有內容。
+            </p>
+
+            <hr />
+            <h3>政策更新與聯絡方式</h3>
+            <p>
+                這份政策如果有調整，會直接更新在這一頁，並修改最上方的日期。有任何疑問，歡迎透過
+                <a href="https://forms.gle/6JYrZwiZPHqsZ7ZB6" target="_blank" rel="noopener noreferrer">聯絡表單</a>
+                與我們聯繫。
+            </p>
+        </div>
+    </section>
+</GenericLayout>

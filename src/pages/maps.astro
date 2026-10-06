@@ -1,34 +1,25 @@
 ---
 import { Image } from 'astro:assets';
 import GenericLayout from '../layouts/GenericLayout.astro';
+import { maps, mapUrl } from '../data/maps';
 const pageTitle = "SRA Studio";
 const mainTitle = "Maps";
 const subTitle = "Minecraft地圖集";
+const description = "SRA Studio 製作的 Minecraft 地圖集。";
 
-import Pic01 from '../images/pic01.jpg';
-import Pic02 from '../images/pic02.jpg';
 ---
-<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle}>
+<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle} description={description}>
     <section class="tiles">
-        <article><a href="/maps/202608_LostDreamlandParadise" class="link">
-            <span class="image">
-                <Image src={Pic01} alt="" />
-            </span>
-            <header class="major">
-                <h3>Lost Dreamland Paradise</h3>
-                <p>失落的夢境樂園</p>
-            </header>
-        </a></article>
-
-        <article><a href="/maps/202510_HauntedHouse" class="link">
-            <span class="image">
-                <Image src={Pic02} alt="" />
-            </span>
-            <header class="major">
-                <h3>Haunted House</h3>
-                <p>鬼屋</p>
-            </header>
-        </a></article>
-
+        {maps.map((gameMap) => (
+            <article><a href={mapUrl(gameMap)} class="link">
+                <span class="image">
+                    <Image src={gameMap.cover} alt="" />
+                </span>
+                <header class="major">
+                    <h3>{gameMap.title}</h3>
+                    <p>{gameMap.subtitle}</p>
+                </header>
+            </a></article>
+        ))}
     </section>
 </GenericLayout>

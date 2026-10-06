@@ -1,16 +1,18 @@
 ---
-import { Image } from 'astro:assets';
 import GenericLayout from '../../layouts/GenericLayout.astro';
+import Gallery from '../../components/Gallery.astro';
+import { getMap } from '../../data/maps';
 const pageTitle = "SRA Studio | Maps";
-const mainTitle = "Haunted Hause";
-const subTitle = "鬼屋";
+
+// 名稱、簡介、發布日期、標籤等基本資料集中在 src/data/maps.ts
+const gameMap = getMap('202510_HauntedHouse');
 
 import Pic01 from '../../images/pic01.jpg'
 import Pic02 from '../../images/pic02.jpg'
 import Pic03 from '../../images/pic03.jpg'
 import Banner from '../../images/banner.jpg'
 ---
-<GenericLayout pageTitle={pageTitle} mainTitle={mainTitle} subTitle={subTitle}>
+<GenericLayout pageTitle={pageTitle} mainTitle={gameMap.title} subTitle={gameMap.subtitle} description={gameMap.description}>
     <section class="wrapper style5">
         <div class="inner">
             <h3>Introduction</h3>
@@ -22,10 +24,10 @@ import Banner from '../../images/banner.jpg'
             </p>
 
             <p>
-                <a class="icon fa-solid fa-calendar" title="發布日期"></a> Comming Soon<br />
-                <a class="icon fa-solid fa-link"></a> <a href="#download" class="more scrolly no-underline content-link">下載連結</a><br />
+                <span class="icon fa-solid fa-calendar" title="發布日期"></span> {gameMap.release}<br />
+                <span class="icon fa-solid fa-link"></span> <a href="#download" class="more scrolly no-underline content-link">下載連結</a><br />
                 <br />
-                <a class="icon fa-solid fa-hashtag"></a> 地圖、資料包
+                <span class="icon fa-solid fa-hashtag"></span> {gameMap.tags}
             </p>
 
             <hr />
@@ -51,20 +53,7 @@ import Banner from '../../images/banner.jpg'
 
             <hr />
             <h4>Images</h4>
-            <div class="box alt">
-                <div class="row gtr-50 gtr-uniform">
-                    <div class="col-12"><span class="image fit"><Image src={Banner} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic01} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic02} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic03} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic03} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic02} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic01} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic02} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic01} alt="" /></span></div>
-                    <div class="col-4"><span class="image fit"><Image src={Pic03} alt="" /></span></div>
-                </div>
-            </div>
+            <Gallery title={gameMap.title} images={[Banner, Pic01, Pic02, Pic03, Pic03, Pic02, Pic01, Pic02, Pic01, Pic03]} />
 
             <hr />
             <h4>CREDITS</h4>

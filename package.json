@@ -1,5 +1,5 @@
 {
-  "name": "@example/minimal",
+  "name": "sra-studio-website",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@astrojs/preact": "^5.1.4",
