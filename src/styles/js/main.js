@@ -50,6 +50,22 @@
 				offset: $header.outerHeight()
 			});
 
+	// Back to top.
+		var $backToTop = $('#backToTop');
+		var updateBackToTopVisibility = function() {
+			$backToTop.toggleClass('is-visible', $window.scrollTop() > 300);
+		};
+
+		$window.on('scroll', updateBackToTopVisibility);
+		updateBackToTopVisibility();
+
+		$backToTop.on('click', function() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+
 	// Menu.
 		$('#menu')
 			.append('<a href="#menu" class="close"></a>')

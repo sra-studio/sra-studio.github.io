@@ -4501,6 +4501,59 @@ input, select, textarea {
   opacity: 1;
 }
 
+.back-to-top {
+	align-items: center;
+	background: #524e48;
+	border: 0;
+	border-radius: 50%;
+	box-shadow: none;
+	bottom: 20px;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	font-size: 1.2rem;
+	height: 50px !important;
+	justify-content: center;
+	left: auto;
+	line-height: 1;
+	max-width: none;
+	min-height: 50px;
+	min-width: 50px;
+	opacity: 0;
+	padding: 0;
+	pointer-events: none;
+	position: fixed;
+	right: 20px;
+	transform: translateY(10px);
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	aspect-ratio: 1;
+	width: 50px !important;
+	z-index: 9999;
+}
+
+.back-to-top::before {
+	font-family: "Font Awesome 7 Free";
+	font-weight: 900;
+	left: 50%;
+	line-height: 1;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(-45%, -50%);
+}
+
+.back-to-top.is-visible {
+	opacity: 0.7;
+	pointer-events: auto;
+	transform: translateY(0);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+	background: #625d56 !important;
+	opacity: 1;
+}
+
 .content-link:hover {
 	color:#8b8b8b !important;
 }
